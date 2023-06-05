@@ -23,8 +23,8 @@ const ListTasks = ({task}) => {
     let {id,completed,category,taskname,subtask} = task;
     const navigation = useNavigation();
     return (
-        <View style={tw`my-2 p-2 rounded-lg bg-white`}>
-            <TouchableOpacity style={[tw`rounded-lg bg-white relative`,{}]} onPress={() => navigation.navigate('mytask',task)}>
+        <View style={completed?tw`my-2 p-2 rounded-lg bg-green-200`:tw`my-2 p-2 rounded-lg bg-white`}>
+            <TouchableOpacity style={completed?tw`rounded-lg relative bg-green-200`:tw`rounded-lg relative bg-white`} onPress={() => navigation.navigate('mytask',task)}>
                 <View style={tw`flex-row justify-between items-center mt-4`}>
                     <View style={tw`h-8 w-8 rounded-full bg-blue-100 flex justify-center items-center`}>
                         <Ionicons name="person-outline" size={20} />

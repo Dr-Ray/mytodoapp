@@ -1,4 +1,4 @@
-import { ScrollView, TouchableOpacity, View, Text, ActivityIndicator } from 'react-native'
+import { ScrollView, TouchableOpacity, View, Text, ActivityIndicator, StatusBar } from 'react-native'
 import React, { useEffect, useState } from 'react';
 import tw from 'twrnc';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -70,6 +70,7 @@ const Home = () => {
         return (
             
             <View style={tw`bg-gray-100 h-full w-full relative`}>
+                <StatusBar backgroundColor="#000" />
                 <View style={tw`px-2 bg-gray-100 h-full w-full relative`}>
                     <Navigation deleteAllTask={deleteAllTask} />
                     {
